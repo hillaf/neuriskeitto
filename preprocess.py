@@ -244,9 +244,9 @@ if preprocess:
     #with open('project_data/project_train_data_idx2word.json', 'w') as outfile:
     #    json.dump(idx2word, outfile)
 else:
-    with open('project_data/project_train_data_tokenized_ingr.json') as json_file:
+    with open('project_data/project_train_data_ingr.json') as json_file:
         train_data_ingr = json.load(json_file)
-    with open('project_data/project_train_data_tokenized_instr.json') as json_file:
+    with open('project_data/project_train_data_instr.json') as json_file:
         train_data_instr = json.load(json_file)
     with open('project_data/project_train_data_word2idx.json') as json_file:
         word2idx = json.load(json_file)

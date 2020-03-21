@@ -13,6 +13,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 import nltk
 from torch.nn.utils.rnn import pad_sequence
+from torch.utils.data import random_split
 
 import preprocess_for_s2s
 from preprocess_for_s2s import idx_to_words
@@ -20,7 +21,7 @@ from model import EncoderRNN, AttnDecoderRNN
 
 
 # Training loop
-def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length):
+def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, loss_function, max_length):
     encoder_hidden = encoder.initHidden(device)
 
     encoder_optimizer.zero_grad()
@@ -50,7 +51,7 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
             #print(decoder_hidden)
             #print(encoder_outputs)
             decoder_output, decoder_hidden, decoder_attention = decoder(decoder_input, decoder_hidden, encoder_outputs)
-            loss += criterion(decoder_output, target_tensor[di])
+            loss += loss_function(decoder_output, target_tensor[di])
             decoder_input = target_tensor[di]  # Teacher forcing
 
     else:
@@ -63,7 +64,7 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
             topv, topi = decoder_output.topk(1)
             decoder_input = topi.squeeze().detach()  # detach from history as input
 
-            loss += criterion(decoder_output, target_tensor[di])
+            loss += loss_function(decoder_output, target_tensor[di])
             if decoder_input.item() == word2idx['<EOS>']:
                 break
 
@@ -81,17 +82,14 @@ def trainIters(encoder, decoder, n_iters, max_length, print_every=1000, plot_eve
     print_loss_total = 0  # Reset every print_every
     plot_loss_total = 0  # Reset every plot_every
 
-    criterion = nn.NLLLoss()
-
     for iter in range(1, n_iters + 1):
-        #shuffle(train_set)
 
         training_pair = train_set[iter - 1]
-        input_tensor = training_pair[0]
-        target_tensor = training_pair[1]
+        input_tensor = training_pair[0].to(device)
+        target_tensor = training_pair[1].to(device)
 
         loss = train(input_tensor, target_tensor, encoder,
-                     decoder, encoder_optimizer, decoder_optimizer, criterion, max_length)
+                     decoder, encoder_optimizer, decoder_optimizer, loss_function, max_length)
         print_loss_total += loss
         plot_loss_total += loss
 
@@ -148,26 +146,13 @@ def random_evaluate(evaluation_data, n=10):
         pair = choice(evaluation_data)
         print('Instruction step', idx_to_words(pair[0], idx2word))
         print('Next step', idx_to_words(pair[1], idx2word))
-        output_words = evaluate(encoder, decoder, pair[0])
+        output_words = evaluate(encoder, decoder, pair[0].to(device))
         output_sentence = ' '.join(output_words)
         print('Generated instructions', output_sentence)
         print('')
 
 
 
-#--- hyperparameters ---
-#N_EPOCHS = 10
-LEARNING_RATE = 0.01
-REPORT_EVERY = 1
-HIDDEN_DIM = 256
-#BATCH_SIZE = 20
-#N_LAYERS = 1
-teacher_forcing_ratio = 1
-TRAIN_SET_SIZE = 200000
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-torch.set_num_threads(10)
 
 
 
@@ -176,8 +161,24 @@ recipe_step_pairs, idx2word, word2idx, MAX_LENGTH = preprocess_for_s2s.get_tenso
 n_words = len(word2idx)
 print(recipe_step_pairs[0])
 
+
+#--- hyperparameters ---
+N_EPOCHS = 15
+LEARNING_RATE = 0.01
+REPORT_EVERY = 1000
+HIDDEN_DIM = 256
+#BATCH_SIZE = 20
+#N_LAYERS = 1
+teacher_forcing_ratio = 1
+TRAIN_SET_SIZE = int(len(recipe_step_pairs)*0.9)
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+torch.set_num_threads(10)
+
+
 # Split into training and data set
-train_set, val_set = torch.utils.data.random_split(recipe_step_pairs, [TRAIN_SET_SIZE, len(recipe_step_pairs)-TRAIN_SET_SIZE])
+train_set, val_set = random_split(recipe_step_pairs, [TRAIN_SET_SIZE, len(recipe_step_pairs)-TRAIN_SET_SIZE])
 print(len(train_set))
 print(len(val_set))
 
@@ -185,21 +186,30 @@ print(len(val_set))
 encoder = EncoderRNN(n_words, HIDDEN_DIM).to(device)
 decoder = AttnDecoderRNN(HIDDEN_DIM, n_words, max_length=MAX_LENGTH).to(device)
 
-encoder_optimizer = optim.SGD(encoder.parameters(), lr=LEARNING_RATE)
-decoder_optimizer = optim.SGD(decoder.parameters(), lr=LEARNING_RATE)
+encoder_optimizer = optim.Adam(encoder.parameters(), lr=LEARNING_RATE)
+decoder_optimizer = optim.Adam(decoder.parameters(), lr=LEARNING_RATE)
+loss_function = nn.NLLLoss()
 
-losses = trainIters(encoder, decoder, n_iters=5, max_length=MAX_LENGTH, print_every=REPORT_EVERY)
+
+losses_per_epoch = []
+for e in range(N_EPOCHS):
+    train_set = list(train_set)
+    shuffle(train_set)
+    loss = trainIters(encoder, decoder, n_iters=1, max_length=MAX_LENGTH, print_every=REPORT_EVERY)
+    losses_per_epoch.append(loss)
+
+
 
 torch.save({
             'encoder_state_dict': encoder.state_dict(),
             'decoder_state_dict': decoder.state_dict(),
             'encoder_optim_state_dict': encoder_optimizer.state_dict(),
             'decoder_optim_state_dict': decoder_optimizer.state_dict(),
-            'losses': losses
-            }, '/home/hilla/uni_dl/project/model.pt')
+            'losses': losses_per_epoch
+            }, './model-small.pt')
 
 
-EVALUATE_N = 15
+EVALUATE_N = 10
 random_evaluate(evaluation_data=val_set, n=EVALUATE_N)
 
 

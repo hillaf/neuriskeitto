@@ -81,7 +81,7 @@ def get_tensor_data():
         for step in rec:
             total_steps = total_steps + 1
             sum_len_instr = sum_len_instr + len(step)
-            if len(step) > 70:
+            if len(step) > 40:
                 rm_indices.add(i)
                 count_short_instr = count_short_instr + 1
             if len(step) > MAX_LENGTH:
@@ -90,7 +90,7 @@ def get_tensor_data():
     sum_len_ingr = 0
     for ingr in input_ingr_tensors:
         sum_len_ingr = sum_len_ingr + len(ingr)
-        if len(ingr) < 70:
+        if len(ingr) < 30:
             count_short = count_short + 1
 
     print("Max instruction step length: ", MAX_LENGTH)
