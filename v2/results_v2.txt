@@ -1,0 +1,318 @@
+[43860, 0, 1, 43861, 2, 43861, 3, 43861, 4, 43861, 5, 43861, 6, 43861, 7, 43861, 8, 9, 10, 43861, 11, 12, 13, 14, 15, 43861, 16, 43861, 43862]
+Max instruction step length:  493
+<SOS> Mash the yeast with a pinch of salt and the lukewarm water in a cup or small bowl until smooth , then let stand for about 10 minutes , until the mixture is frothy . Beat two of the eggs in a bowl . Sift the flour with a pinch of salt onto a work surface . Make a well in the center and pour in the beaten egg and yeast mixture . Gradually incorporate the flour into the liquid , then knead well for 10 minutes . Dust the surface lightly with flour to prevent the dough sticking . Add the margarine and knead for 10 minutes more , banging the dough onto the surface . Add a little water to the dough if necessary . Once the dough is smooth and elastic , form it into a ball , place it in a bowl , and cover with a clean dish towel . Let rise in a warm place for 1 to 2 hours , until doubled in volume . Meanwhile , make the `` rustido . '' Heat the olive oil in a skillet . Add the onions and cook over low heat , stirring occasionally , for 10 minutes , until softened and translucent . Add the garlic and parsley and cook for 5 minutes more . Stir in the chorizo and cook for 2 minutes more . Remove the skillet from the heat and set aside . Heat the sunflower oil in a skillet . Add the strips of meat and cook over medium-low heat , stirring frequently , for about 8 minutes , until golden brown . Remove from the skillet with a slotted spoon and set aside . Preheat the oven to 350°F . Brush a 12-inch baking pan or ovenproof baking dish with oil . Divide the dough into two pieces , one slightly bigger than the other . Roll out the larger piece on a lightly floured surface and use to line the pan or dish . Spread half the rustido over the dough . Lay the strips of meat on the rustido and add the strips of bell pepper . Spoon the remaining rustido over the top . Roll out the remaining dough and use it to cover the mixture . Seal the edges of the dough carefully , pressing them together and rolling them slightly . Pinch the dough in the center of the pie with two fingers to create a chimney to allow the steam to escape . Beat the remaining egg and brush it over the dough to glaze . Bake for 15 minutes , then increase the oven temperature to 375°F , and bake for 15 minutes longer . Increase the oven temperature to 400°F and bake for 15 minutes more , until golden brown . Remove the pie from the oven . Serve hot or warm , straight from the dish , if you prefer . <EOS>
+Number of short ingredient lists:  136050
+Average ingredient list length: 22.355650494528003
+Number of long instructions:  61032
+Average instruction length: 149.95270527301457
+Training set total size:  489828
+223824
+(tensor([[43860],
+        [   17],
+        [   18],
+        [   19],
+        [   20],
+        [   21],
+        [   22],
+        [   23],
+        [   24],
+        [   21],
+        [   25],
+        [   26],
+        [   27],
+        [   28],
+        [   29],
+        [   30],
+        [   31],
+        [   32],
+        [   33],
+        [   27],
+        [43862]]), tensor([[43860],
+        [   34],
+        [   35],
+        [   36],
+        [    1],
+        [   37],
+        [   38],
+        [   39],
+        [   40],
+        [   41],
+        [   42],
+        [   43],
+        [   27],
+        [   44],
+        [    2],
+        [   45],
+        [   46],
+        [   47],
+        [   48],
+        [   49],
+        [   50],
+        [   51],
+        [   52],
+        [   27],
+        [   53],
+        [   27],
+        [43862]]))
+200000
+23824
+(1000 0%) 5.4119
+(2000 1%) 4.2026
+(3000 1%) 3.9191
+(4000 2%) 3.7437
+(5000 2%) 3.6419
+(6000 3%) 3.5169
+(7000 3%) 3.5390
+(8000 4%) 3.4189
+(9000 4%) 3.3731
+(10000 5%) 3.2636
+(11000 5%) 3.2912
+(12000 6%) 3.2759
+(13000 6%) 3.1901
+(14000 7%) 3.1321
+(15000 7%) 3.1709
+(16000 8%) 3.1538
+(17000 8%) 3.1022
+(18000 9%) 3.1225
+(19000 9%) 3.0903
+(20000 10%) 3.0945
+(21000 10%) 3.0735
+(22000 11%) 3.0568
+(23000 11%) 3.0587
+(24000 12%) 3.0204
+(25000 12%) 2.9983
+(26000 13%) 3.0221
+(27000 13%) 3.0552
+(28000 14%) 2.9286
+(29000 14%) 3.0014
+(30000 15%) 2.9512
+(31000 15%) 2.8991
+(32000 16%) 2.9533
+(33000 16%) 2.9047
+(34000 17%) 2.9420
+(35000 17%) 2.9165
+(36000 18%) 2.9552
+(37000 18%) 2.8370
+(38000 19%) 2.9147
+(39000 19%) 2.8725
+(40000 20%) 2.9128
+(41000 20%) 2.9097
+(42000 21%) 2.9329
+(43000 21%) 2.9006
+(44000 22%) 2.8811
+(45000 22%) 2.8595
+(46000 23%) 2.8617
+(47000 23%) 2.8467
+(48000 24%) 2.8658
+(49000 24%) 2.9014
+(50000 25%) 2.7775
+(51000 25%) 2.7928
+(52000 26%) 2.8703
+(53000 26%) 2.8496
+(54000 27%) 2.8390
+(55000 27%) 2.8322
+(56000 28%) 2.8161
+(57000 28%) 2.8337
+(58000 28%) 2.8233
+(59000 29%) 2.8843
+(60000 30%) 2.7730
+(61000 30%) 2.7645
+(62000 31%) 2.8021
+(63000 31%) 2.8667
+(64000 32%) 2.8281
+(65000 32%) 2.7835
+(66000 33%) 2.7811
+(67000 33%) 2.8325
+(68000 34%) 2.7735
+(69000 34%) 2.8061
+(70000 35%) 2.7776
+(71000 35%) 2.8242
+(72000 36%) 2.8460
+(73000 36%) 2.7508
+(74000 37%) 2.7624
+(75000 37%) 2.7455
+(76000 38%) 2.7415
+(77000 38%) 2.7380
+(78000 39%) 2.7254
+(79000 39%) 2.7343
+(80000 40%) 2.8181
+(81000 40%) 2.7667
+(82000 41%) 2.7393
+(83000 41%) 2.7535
+(84000 42%) 2.7536
+(85000 42%) 2.7332
+(86000 43%) 2.7522
+(87000 43%) 2.7315
+(88000 44%) 2.7595
+(89000 44%) 2.7281
+(90000 45%) 2.7531
+(91000 45%) 2.7816
+(92000 46%) 2.7927
+(93000 46%) 2.8037
+(94000 47%) 2.7842
+(95000 47%) 2.7882
+(96000 48%) 2.7475
+(97000 48%) 2.6919
+(98000 49%) 2.6941
+(99000 49%) 2.7791
+(100000 50%) 2.7051
+(101000 50%) 2.8240
+(102000 51%) 2.7224
+(103000 51%) 2.7203
+(104000 52%) 2.7318
+(105000 52%) 2.7065
+(106000 53%) 2.7112
+(107000 53%) 2.7715
+(108000 54%) 2.7733
+(109000 54%) 2.7408
+(110000 55%) 2.7027
+(111000 55%) 2.8013
+(112000 56%) 2.7498
+(113000 56%) 2.7309
+(114000 56%) 2.7070
+(115000 57%) 2.7380
+(116000 57%) 2.8509
+(117000 58%) 2.6993
+(118000 59%) 2.7586
+(119000 59%) 2.7602
+(120000 60%) 2.7408
+(121000 60%) 2.7589
+(122000 61%) 2.7551
+(123000 61%) 2.7370
+(124000 62%) 2.7408
+(125000 62%) 2.7259
+(126000 63%) 2.7633
+(127000 63%) 2.7195
+(128000 64%) 2.7183
+(129000 64%) 2.7016
+(130000 65%) 2.7070
+(131000 65%) 2.7543
+(132000 66%) 2.7500
+(133000 66%) 2.7368
+(134000 67%) 2.7012
+(135000 67%) 2.7174
+(136000 68%) 2.7701
+(137000 68%) 2.8016
+(138000 69%) 2.7544
+(139000 69%) 2.7159
+(140000 70%) 2.7617
+(141000 70%) 2.7763
+(142000 71%) 2.6859
+(143000 71%) 2.7359
+(144000 72%) 2.7808
+(145000 72%) 2.7499
+(146000 73%) 2.7812
+(147000 73%) 2.7455
+(148000 74%) 2.7630
+(149000 74%) 2.7361
+(150000 75%) 2.7592
+(151000 75%) 2.7546
+(152000 76%) 2.7533
+(153000 76%) 2.7465
+(154000 77%) 2.7355
+(155000 77%) 2.7946
+(156000 78%) 2.7266
+(157000 78%) 2.7755
+(158000 79%) 2.7143
+(159000 79%) 2.8061
+(160000 80%) 2.7657
+(161000 80%) 2.7749
+(162000 81%) 2.8383
+(163000 81%) 2.7718
+(164000 82%) 2.8138
+(165000 82%) 2.7848
+(166000 83%) 2.7727
+(167000 83%) 2.7585
+(168000 84%) 2.7651
+(169000 84%) 2.7821
+(170000 85%) 2.8421
+(171000 85%) 2.9154
+(172000 86%) 2.7857
+(173000 86%) 2.8011
+(174000 87%) 2.8345
+(175000 87%) 2.8209
+(176000 88%) 2.7587
+(177000 88%) 2.8066
+(178000 89%) 2.8170
+(179000 89%) 2.8079
+(180000 90%) 2.7839
+(181000 90%) 2.7811
+(182000 91%) 2.7109
+(183000 91%) 2.7358
+(184000 92%) 2.7197
+(185000 92%) 2.7416
+(186000 93%) 2.7104
+(187000 93%) 2.7449
+(188000 94%) 2.7028
+(189000 94%) 2.7326
+(190000 95%) 2.7492
+(191000 95%) 2.7527
+(192000 96%) 2.7305
+(193000 96%) 2.7302
+(194000 97%) 2.7555
+(195000 97%) 2.7467
+(196000 98%) 2.7324
+(197000 98%) 2.7706
+(198000 99%) 2.6703
+(199000 99%) 2.7523
+(200000 100%) 2.8130
+Instruction step <SOS> Butter one 9-inch round cake pan , then line bottom with wax paper . Butter paper and dust pan with some additional flour , knocking out excess . <EOS>
+Next step <SOS> Resift cake flour together with baking soda and salt into a bowl . Whisk egg whites in another bowl with sour cream mixture until combined . <EOS>
+Generated instructions <SOS> Beat eggs , sugar , vanilla , and salt and Stir in the milk and vanilla , and the flour and Beat until smooth and then fold in the flour , Pour into prepared pan . <EOS>
+
+Instruction step <SOS> Return chicken , skin sides up , to skillet and simmer , covered , until chicken is cooked through , 20 to 25 minutes . Transfer chicken to a platter . <EOS>
+Next step <SOS> Add jelly and cilantro to sauce , stirring until jelly is melted . Season sauce with salt and pepper and spoon over chicken . <EOS>
+Generated instructions <SOS> Stir in chicken and and cook until heated through , about 5 minutes . <EOS>
+
+Instruction step <SOS> To make Sweetened Whipped Cream : Stir together 1/2 cup cold whipping cream , 1 tablespoon powdered sugar and 1/4 teaspoon vanilla extract in small bowl ; beat until stiff . <EOS>
+Next step <SOS> Variation : Fudgey Mocha Pecan Pie : Dissolve 1 teaspoon powdered instant coffee in 1 teaspoon hot water in small bowl ; add to pie filling when adding corn syrup and salt . <EOS>
+Generated instructions <SOS> Spoon about 1 tablespoon of the cream cheese mixture over each . Spoon about 1 tablespoon of cream cheese mixture over each . Top each with <EOS>
+
+Instruction step <SOS> Reserve 6 mint leaves for garnish . Place remaining mint leaves in medium bowl . Add sugar . Mash with wooden spoon until mint is aromatic and oils are released . Add rum and lime juice and stir until sugar dissolves . Strain mixture into pitcher . ( Can be prepared 2 hours ahead ; refreigerate . ) <EOS>
+Next step <SOS> Add club soda to pitcher ; gently stir . Fill each of 6 glasses with 1 cup crushed ice . Pour mojito over and garnish each glass with 1 mint leaf and 1 lime wedge . <EOS>
+Generated instructions <SOS> Garnish with <EOS>
+
+Instruction step <SOS> Stir milk , zucchini , eggs , and butter in a bowl until evenly blended . Combine flour , oats , baking powder , brown sugar , salt , and cinnamon in another bowl ; gradually stir flour mixture into zucchini mixture . <EOS>
+Next step <SOS> Ladle batter into preheated waffle iron . Cook until waffles are golden and crisp , about 5 minutes . <EOS>
+Generated instructions <SOS> Pour melted butter into the mixture . <EOS>
+
+Instruction step <SOS> Preheat oven to 350 degrees F ( 175 degrees C ) . Press pie crust into a 9-inch square pan . <EOS>
+Next step <SOS> Heat olive oil in a skillet over medium heat ; cook and stir onion until transparent , 5 to 10 minutes . Add garlic , oregano , cayenne pepper , salt , and black pepper to onion ; cook and stir until fragrant , about 2 minutes . Remove skillet from heat and cool onion mixture slightly . <EOS>
+Generated instructions <SOS> Bake in the preheated oven until golden , about 1 hour , <EOS>
+
+Instruction step <SOS> Trim cauliflower stalk flush with base of crown , discarding stalk , then trim any leaves . Put cauliflower crown , stalk side down , on a cutting board . Cut a 1-inch slice from 2 opposite sides of crown and discard , then cut crown lengthwise into 4 `` steaks , '' each about 3/4 to 1 inch wide . <EOS>
+Next step <SOS> Heat 1 tablespoon oil , 1 tablespoon butter , 1/8 teaspoon salt , and a pinch each of sugar and pepper in each 12-inch skillet over moderate heat , swirling skillets occasionally , until butter begins to brown . Add 2 cauliflower steaks to each skillet and lightly season with salt and pepper , then cook until undersides are golden , about 4 minutes . <EOS>
+Generated instructions <SOS> Bake in middle , , in upper third of the oven until crisp , golden , about 30 minutes . <EOS>
+
+Instruction step <SOS> Preheat oven to 375 degrees F ( 190 degrees C ) . Grease one 13x9 inch pan . <EOS>
+Next step <SOS> Combine 1 cup of the sugar , the flour , baking powder , salt , ground cinnamon , shortening , and egg . Dough will be crumbly . Pat half of the dough into the prepared pan . <EOS>
+Generated instructions <SOS> In a large bowl , cream the butter and sugar and Beat until light and fluffy . Beat in the eggs one at a time , mixing well after each addition . Pour into the prepared pan . <EOS>
+
+Instruction step <SOS> Place steak slices , onions and peppers in nonmetal dish . Add combined steak sauce and curry powder ; stir to evenly coat steak and vegetables . Cover . Refrigerate 1 hour to marinate , stirring occasionally . Meanwhile , soak skewers in water for at least 30 minutes . <EOS>
+Next step <SOS> Preheat grill to medium-high heat . Drain steak slices and vegetables ; discard marinade . Alternately thread steak ( accordion style ) , vegetables and pineapple onto skewers . <EOS>
+Generated instructions <SOS> Preheat broiler . <EOS>
+
+Instruction step <SOS> Whisk water and cornstarch together in a bowl until smooth . <EOS>
+Next step <SOS> Combine cranberry sauce , turkey drippings , curry powder , thyme , anise seed , cardamom , and orange zest in a small saucepan ; cook , stirring occasionally , over medium heat for about 5 minutes . <EOS>
+Generated instructions <SOS> Stir the eggs , sugar , and vanilla extract into the mixture . <EOS>
+
+Instruction step <SOS> Add the gravy browning powder and season , to taste , with salt and freshly ground black pepper . Cover the casserole with a lid and simmer for three hours , stirring occasionally , or until the cooking liquid has thickened and the meat is tender . <EOS>
+Next step <SOS> Meanwhile , for the dumplings , in a large mixing bowl , mix together the flour and chopped parsley . Season , to taste , with salt and freshly ground black pepper . <EOS>
+Generated instructions <SOS> Add the stock and bring the liquid to the boil and reduce the heat to simmer for a further 20 minutes , or until the potatoes are tender . <EOS>
+
+Instruction step <SOS> Preheat oven to 350 degrees F ( 175 degrees C ) . <EOS>
+Next step <SOS> Melt 2 tablespoons butter in a large skillet over medium heat . Stir in flour until smooth , and cook for one minute . Stir in the salt , sugar , onion , and sour cream . Add green beans , and stir to coat . <EOS>
+Generated instructions <SOS> In a large bowl , cream the butter and sugar and sugar . and eggs . Beat the egg yolks and vanilla . and vanilla extract . Beat the eggs . vanilla . and vanilla . Beat the egg whites . <EOS>
+
+Instruction step <SOS> Heat the oil in a large skillet over medium-high heat . Place the chicken parts in the hot oil and lightly brown quickly on all sides . Transfer chicken parts to a Dutch oven , add the milk and broth and cover . <EOS>
+Next step <SOS> Bake at 350 degrees F ( 175 degrees C ) for 1 hour . <EOS>
+Generated instructions <SOS> Add the chicken stock and onion , and garlic . Cook until the liquid is absorbed and <EOS>
+
+Instruction step <SOS> Stir onion and celery into vegetable juice . <EOS>
+Next step <SOS> Pour vegetable juice mixture over dissolved gelatin ; stir gently to blend . <EOS>
+Generated instructions <SOS> Pour into the prepared pan , <EOS>
+
+Instruction step <SOS> Cook and stir chicken in the hot oil just until the meat is white outside but still pink inside , about 3 minutes . <EOS>
+Next step <SOS> Remove chicken and set aside in a bowl . <EOS>
+Generated instructions <SOS> Stir in the chicken and <EOS>
+

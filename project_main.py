@@ -15,8 +15,8 @@ import nltk
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import random_split
 
-import preprocess_for_s2s
-from preprocess_for_s2s import idx_to_words
+import helpers
+from helpers import idx_to_words
 from model import EncoderRNN, AttnDecoderRNN
 
 
@@ -155,17 +155,14 @@ def random_evaluate(evaluation_data, n=10):
 
 
 
-
 # Load data
-recipe_step_pairs, idx2word, word2idx, MAX_LENGTH = preprocess_for_s2s.get_tensor_data()
+recipe_step_pairs, idx2word, word2idx, MAX_LENGTH = helpers.get_tensor_data()
 n_words = len(word2idx)
-print(recipe_step_pairs[0])
-
 
 #--- hyperparameters ---
-N_EPOCHS = 15
+N_EPOCHS = 5
 LEARNING_RATE = 0.01
-REPORT_EVERY = 1000
+REPORT_EVERY = 1
 HIDDEN_DIM = 256
 #BATCH_SIZE = 20
 #N_LAYERS = 1
@@ -173,7 +170,6 @@ teacher_forcing_ratio = 1
 TRAIN_SET_SIZE = int(len(recipe_step_pairs)*0.9)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 torch.set_num_threads(10)
 
 
@@ -181,7 +177,6 @@ torch.set_num_threads(10)
 train_set, val_set = random_split(recipe_step_pairs, [TRAIN_SET_SIZE, len(recipe_step_pairs)-TRAIN_SET_SIZE])
 print(len(train_set))
 print(len(val_set))
-
 
 encoder = EncoderRNN(n_words, HIDDEN_DIM).to(device)
 decoder = AttnDecoderRNN(HIDDEN_DIM, n_words, max_length=MAX_LENGTH).to(device)
@@ -193,9 +188,10 @@ loss_function = nn.NLLLoss()
 
 losses_per_epoch = []
 for e in range(N_EPOCHS):
+    print("---- epoch ", e)
     train_set = list(train_set)
     shuffle(train_set)
-    loss = trainIters(encoder, decoder, n_iters=1, max_length=MAX_LENGTH, print_every=REPORT_EVERY)
+    loss = trainIters(encoder, decoder, n_iters=2, max_length=MAX_LENGTH, print_every=REPORT_EVERY)
     losses_per_epoch.append(loss)
 
 
@@ -206,7 +202,7 @@ torch.save({
             'encoder_optim_state_dict': encoder_optimizer.state_dict(),
             'decoder_optim_state_dict': decoder_optimizer.state_dict(),
             'losses': losses_per_epoch
-            }, './model-small.pt')
+            }, './model-test.pt')
 
 
 EVALUATE_N = 10
