@@ -83,7 +83,6 @@ def trainIters(encoder, decoder, n_iters, max_length, print_every=1000, plot_eve
     plot_loss_total = 0  # Reset every plot_every
 
     for iter in range(1, n_iters + 1):
-
         training_pair = train_set[iter - 1]
         input_tensor = training_pair[0].to(device)
         target_tensor = training_pair[1].to(device)
@@ -160,9 +159,9 @@ recipe_step_pairs, idx2word, word2idx, MAX_LENGTH = helpers.get_tensor_data()
 n_words = len(word2idx)
 
 #--- hyperparameters ---
-N_EPOCHS = 5
+N_EPOCHS = 7
 LEARNING_RATE = 0.01
-REPORT_EVERY = 1
+REPORT_EVERY = 1000
 HIDDEN_DIM = 256
 #BATCH_SIZE = 20
 #N_LAYERS = 1
@@ -181,8 +180,8 @@ print(len(val_set))
 encoder = EncoderRNN(n_words, HIDDEN_DIM).to(device)
 decoder = AttnDecoderRNN(HIDDEN_DIM, n_words, max_length=MAX_LENGTH).to(device)
 
-encoder_optimizer = optim.Adam(encoder.parameters(), lr=LEARNING_RATE)
-decoder_optimizer = optim.Adam(decoder.parameters(), lr=LEARNING_RATE)
+encoder_optimizer = optim.SGD(encoder.parameters(), lr=LEARNING_RATE)
+decoder_optimizer = optim.SGD(decoder.parameters(), lr=LEARNING_RATE)
 loss_function = nn.NLLLoss()
 
 
@@ -191,9 +190,8 @@ for e in range(N_EPOCHS):
     print("---- epoch ", e)
     train_set = list(train_set)
     shuffle(train_set)
-    loss = trainIters(encoder, decoder, n_iters=2, max_length=MAX_LENGTH, print_every=REPORT_EVERY)
+    loss = trainIters(encoder, decoder, n_iters=TRAIN_SET_SIZE, max_length=MAX_LENGTH, print_every=REPORT_EVERY)
     losses_per_epoch.append(loss)
-
 
 
 torch.save({

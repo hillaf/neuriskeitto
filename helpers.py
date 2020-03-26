@@ -24,7 +24,8 @@ def get_ingr_tensors(word2idx):
     # To idx representation
     input_ingr = []
     for recipe in all_recs_ingr:
-        input_ingr.append([word2idx[w] for w in recipe])
+        # Leave out <LN> helper tokens
+        input_ingr.append([word2idx[w] for w in recipe if w != '<LN>'])
     # Create tensors
     input_ingr_tensors = [torch.tensor(rec).view(-1, 1) for rec in input_ingr]
     return input_ingr_tensors
@@ -98,6 +99,13 @@ def get_instruction_steps(recipes):
             recipe_step_pairs.append((instr_step, recipe[1][i+1]))
     print("Recipe step pairs: ", len(recipe_step_pairs))
     return recipe_step_pairs
+
+
+def get_first_steps(recipes):
+    recipe_first_steps = []
+    for rec in recipes:
+        recipe_first_steps.append(rec[0])
+    return recipe_first_steps
 
 
 def get_tensor_data(limit=70):
