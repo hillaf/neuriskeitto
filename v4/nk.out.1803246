@@ -1,0 +1,294 @@
+Number of short ingredient lists:  130567
+Average ingredient list length: 14.175872007959267
+No ingredients filtered
+Max instruction step length:  70
+Number of long instructions:  61032
+Average instruction length: 149.95270527301457
+Total instruction steps:  489828
+Recipes filtered:  61455
+Recipes left after filtering:  75241
+Recipe step pairs:  223824
+201441
+22383
+---- epoch  0
+(1000 0%) 5.3874
+(2000 0%) 4.1033
+(3000 1%) 3.8424
+(4000 1%) 3.6464
+(5000 2%) 3.5660
+(6000 2%) 3.4470
+(7000 3%) 3.3671
+(8000 3%) 3.2833
+(9000 4%) 3.2227
+(10000 4%) 3.2286
+(11000 5%) 3.1566
+(12000 5%) 3.1440
+(13000 6%) 3.1882
+(14000 6%) 3.0622
+(15000 7%) 3.1070
+(16000 7%) 3.0507
+(17000 8%) 3.0244
+(18000 8%) 3.1732
+(19000 9%) 2.9877
+(20000 9%) 3.0548
+(21000 10%) 3.0671
+(22000 10%) 3.0046
+(23000 11%) 2.9917
+(24000 11%) 2.9848
+(25000 12%) 2.9538
+(26000 12%) 2.9572
+(27000 13%) 2.9717
+(28000 13%) 2.9217
+(29000 14%) 2.9690
+(30000 14%) 2.9242
+(31000 15%) 2.9140
+(32000 15%) 2.8625
+(33000 16%) 2.8633
+(34000 16%) 2.8590
+(35000 17%) 2.8754
+(36000 17%) 2.8193
+(37000 18%) 2.9048
+(38000 18%) 2.8860
+(39000 19%) 2.9111
+(40000 19%) 2.8568
+(41000 20%) 2.8528
+(42000 20%) 2.9178
+(43000 21%) 2.8435
+(44000 21%) 2.8703
+(45000 22%) 2.8183
+(46000 22%) 2.9183
+(47000 23%) 2.8199
+(48000 23%) 2.8503
+(49000 24%) 2.8386
+(50000 24%) 2.7954
+(51000 25%) 2.7643
+(52000 25%) 2.7858
+(53000 26%) 2.8188
+(54000 26%) 2.8311
+(55000 27%) 2.8182
+(56000 27%) 2.8081
+(57000 28%) 2.8190
+(58000 28%) 2.8149
+(59000 29%) 2.7982
+(60000 29%) 2.7967
+(61000 30%) 2.7399
+(62000 30%) 2.7096
+(63000 31%) 2.7637
+(64000 31%) 2.8033
+(65000 32%) 2.7811
+(66000 32%) 2.7405
+(67000 33%) 2.7514
+(68000 33%) 2.8262
+(69000 34%) 2.8069
+(70000 34%) 2.7566
+(71000 35%) 2.7372
+(72000 35%) 2.7221
+(73000 36%) 2.7498
+(74000 36%) 2.7071
+(75000 37%) 2.8037
+(76000 37%) 2.7302
+(77000 38%) 2.7288
+(78000 38%) 2.7344
+(79000 39%) 2.7757
+(80000 39%) 2.7386
+(81000 40%) 2.7151
+(82000 40%) 2.7296
+(83000 41%) 2.7253
+(84000 41%) 2.6897
+(85000 42%) 2.7360
+(86000 42%) 2.7030
+(87000 43%) 2.6991
+(88000 43%) 2.6768
+(89000 44%) 2.7230
+(90000 44%) 2.6981
+(91000 45%) 2.8022
+(92000 45%) 2.7681
+(93000 46%) 2.7496
+(94000 46%) 2.7171
+(95000 47%) 2.7540
+(96000 47%) 2.7285
+(97000 48%) 2.7055
+(98000 48%) 2.7650
+(99000 49%) 2.7432
+(100000 49%) 2.7300
+(101000 50%) 2.7048
+(102000 50%) 2.6892
+(103000 51%) 2.6920
+(104000 51%) 2.7479
+(105000 52%) 2.7477
+(106000 52%) 2.7099
+(107000 53%) 2.7725
+(108000 53%) 2.7375
+(109000 54%) 2.7255
+(110000 54%) 2.6881
+(111000 55%) 2.6951
+(112000 55%) 2.7073
+(113000 56%) 2.6860
+(114000 56%) 2.6637
+(115000 57%) 2.7758
+(116000 57%) 2.8014
+(117000 58%) 2.8188
+(118000 58%) 2.8098
+(119000 59%) 2.6841
+(120000 59%) 2.6869
+(121000 60%) 2.7343
+(122000 60%) 2.7228
+(123000 61%) 2.6958
+(124000 61%) 2.6192
+(125000 62%) 2.6969
+(126000 62%) 2.6926
+(127000 63%) 2.6983
+(128000 63%) 2.6875
+(129000 64%) 2.7049
+(130000 64%) 2.7231
+(131000 65%) 2.7337
+(132000 65%) 2.6546
+(133000 66%) 2.7367
+(134000 66%) 2.6873
+(135000 67%) 2.6757
+(136000 67%) 2.6993
+(137000 68%) 2.7080
+(138000 68%) 2.6798
+(139000 69%) 2.6546
+(140000 69%) 2.7209
+(141000 69%) 2.6774
+(142000 70%) 2.7281
+(143000 70%) 2.7706
+(144000 71%) 2.7533
+(145000 71%) 2.7707
+(146000 72%) 2.7699
+(147000 72%) 2.7428
+(148000 73%) 2.7423
+(149000 73%) 2.7328
+(150000 74%) 2.7144
+(151000 74%) 2.7443
+(152000 75%) 2.7095
+(153000 75%) 2.7666
+(154000 76%) 2.7816
+(155000 76%) 2.7447
+(156000 77%) 2.8043
+(157000 77%) 2.7450
+(158000 78%) 2.7505
+(159000 78%) 2.7673
+(160000 79%) 2.7584
+(161000 79%) 2.7742
+(162000 80%) 2.7723
+(163000 80%) 2.7267
+(164000 81%) 2.7581
+(165000 81%) 2.7075
+(166000 82%) 2.7258
+(167000 82%) 2.7277
+(168000 83%) 2.7772
+(169000 83%) 2.7509
+(170000 84%) 2.7811
+(171000 84%) 2.7391
+(172000 85%) 2.7198
+(173000 85%) 2.7401
+(174000 86%) 2.7703
+(175000 86%) 2.7277
+(176000 87%) 2.7345
+(177000 87%) 2.7889
+(178000 88%) 2.7169
+(179000 88%) 2.7230
+(180000 89%) 2.7464
+(181000 89%) 2.7152
+(182000 90%) 2.7214
+(183000 90%) 2.7439
+(184000 91%) 2.7257
+(185000 91%) 2.7566
+(186000 92%) 2.7357
+(187000 92%) 2.7471
+(188000 93%) 2.7046
+(189000 93%) 2.7456
+(190000 94%) 2.7203
+(191000 94%) 2.7565
+(192000 95%) 2.7985
+(193000 95%) 2.7520
+(194000 96%) 2.7817
+(195000 96%) 2.7643
+(196000 97%) 2.8081
+(197000 97%) 2.8006
+(198000 98%) 2.7022
+(199000 98%) 2.7523
+(200000 99%) 2.7578
+(201000 99%) 2.7494
+Instruction step <SOS> Meanwhile , place the honey into a small saucepan and add salt , lemon thyme and crushed black pepper to taste . Heat the mixture over a low heat . <EOS>
+Next step <SOS> Drizzle the honey over the parsnips and mix well . <EOS>
+Generated instructions <SOS> Pour the mixture into a clean pan and bake for 30 minutes , or until the top is golden-brown and the top is puffed and the top is golden-brown . <EOS>
+
+Instruction step <SOS> For the potatoes , heat a frying pan until medium hot , add the butter and oil and heat until foaming . <EOS>
+Next step <SOS> Add the potatoes and cook for 10 - 12 minutes until golden brown on all sides and just tender . <EOS>
+Generated instructions <SOS> Add the oil and fry for two minutes , or until golden-brown and cooked through . <EOS>
+
+Instruction step <SOS> Toss the fresh strawberries with the honey and a light dusting of icing sugar . <EOS>
+Next step <SOS> Dust the lemon soufflé cakes with extra icing sugar and serve with the strawberries . <EOS>
+Generated instructions <SOS> Place the sugar in a bowl and whisk in the cream . <EOS>
+
+Instruction step <SOS> Rub paste all over lamb . <EOS>
+Next step <SOS> Reduce grill heat to medium-high and oil grill rack . Sear lamb over middle burner , covered , turning once , until well browned , 2 to 3 minutes total . <EOS>
+Generated instructions <SOS> Place a oven on a baking sheet and bake in preheated oven for 15 minutes , or until tender . <EOS>
+
+Instruction step <SOS> Place chicken pieces in a lightly oiled 9x13 inch baking dish ; brush both sides with prepared glaze , using about 1/2 of the glaze . Cover dish and refrigerate to marinate for at least 2 hours or overnight . Also , refrigerate remaining glaze . <EOS>
+Next step <SOS> Preheat oven to 375 degrees F ( 190 degrees C ) . <EOS>
+Generated instructions <SOS> Preheat oven to 400 degrees F ( 200 degrees C ) . <EOS>
+
+Instruction step <SOS> In a medium saucepan , saute onion and green chile peppers until tender . Stir in chicken , then milk and soup . Heat through , mix well and set aside . <EOS>
+Next step <SOS> Preheat oven to 350 degrees F ( 175 degrees C ) . <EOS>
+Generated instructions <SOS> In a large skillet , heat olive oil over medium heat . Add chicken and cook , stirring occasionally , until browned , about 5 minutes . Add chicken , heat through . <EOS>
+
+Instruction step <SOS> Mix mayonnaise , sour cream , and curry powder in a bowl until smooth . <EOS>
+Next step <SOS> Toss apple and lemon juice in a large bowl . Stir in chicken breast meat , celery , green grapes , pecans , and pineapple . Pour mayonnaise mixture over chicken ; toss to combine . Cover and refrigerate until chilled . <EOS>
+Generated instructions <SOS> Stir the bread crumbs , bread crumbs , eggs , and salt together in a bowl until the mixture is well blended . <EOS>
+
+Instruction step <SOS> Toss cheese and cornstarch in a medium heatproof bowl . Pour evaporated milk over and cook in microwave on high 1 minute . Whisk and continue to cook in 30-second increments , whisking in between , until melted and smooth ( about 2 minutes total ) . <EOS>
+Next step <SOS> Once cheese has melted , stir in Rotel and hot sauce , if using , and microwave an additional 30 seconds . Stir to combine . <EOS>
+Generated instructions <SOS> Stir in the cream cheese , cream cheese , and parsley . <EOS>
+
+Instruction step <SOS> Turn dough out onto a lightly floured surface and knead for about 8 to 10 minutes or until dough is smooth and elastic . Place dough in a well greased bowl , turning to grease top . Cover and let rise in a warm place for about 1 hour and 15 minutes . Punch dough down , cover and let rest for 10 minutes . <EOS>
+Next step <SOS> Melt remaining 1/4 cup plus 2 tablespoons butter . <EOS>
+Generated instructions <SOS> Preheat oven to 375 degrees F ( 190 degrees C ) . Grease cookie sheet . <EOS>
+
+Instruction step <SOS> Cook pasta according to package directions . Drain ; set aside . <EOS>
+Next step <SOS> In a large skillet cook the Johnsonville ( R ) Italian Mild Sausage , onion , and garlic until sausage is brown ; remove from skillet . Drain . <EOS>
+Generated instructions <SOS> Meanwhile , in a large skillet , heat oil over medium-high heat . Add onion , celery , celery , celery , celery , celery , celery , celery , celery , celery , celery , celery , celery , celery , celery , celery , carrots , celery , carrots , carrots , celery , carrots , carrots , celery , carrots , carrots , carrots , carrots
+
+Instruction step <SOS> Preheat oven to 350 degrees F ( 175 degrees C ) . Grease a 9x13-inch casserole dish . <EOS>
+Next step <SOS> Fill a large pot with lightly salted water and bring to a rolling boil . Add chicken breasts , bring back to a boil , and cook until chicken is no longer pink in the center , about 15 minutes . Drain chicken and reserve 1 cup of chicken water . Shred chicken . <EOS>
+Generated instructions <SOS> Place bread cubes in a large bowl , stir in bread crumbs , salt , and pepper . Spread the mixture evenly into the prepared baking dish . <EOS>
+
+Instruction step <SOS> Heat remaining olive oil in the skillet over medium-high heat . Saute spinach , parsley , cilantro , and chives in the skillet until slightly wilted , 5 to 6 minutes ; add to the slow cooker . <EOS>
+Next step <SOS> Stir chicken broth , lime juice , and garlic into the mixture in the slow cooker . <EOS>
+Generated instructions <SOS> Cover with lid and cook for 30 minutes . <EOS>
+
+Instruction step <SOS> Pour pumpkin puree mixture into flour mixture ; stir until batter is just combined . <EOS>
+Next step <SOS> Stir white chocolate chips and 1 tablespoon flour together in a bowl until chips are coated . Fold chips into batter ; spoon batter into prepared muffin cups . <EOS>
+Generated instructions <SOS> Heat a griddle or large skillet over medium heat . Cook and stir remaining 1/4 teaspoon butter , hot oil until browned on all sides , about 5 minutes . <EOS>
+
+Instruction step <SOS> In a large bowl , combine the lettuce and other greens , scallions , dill , mint , borage ( if using ) and fennel . Whisk the dressing again and pour it over the salad . Add salt to taste , toss , and sprinkle with the pine nuts , if using . Serve at once . <EOS>
+Next step <SOS> NOTE : There is no substitute for borage — its sweet taste and crunchy texture are unique — but I have heard it compared to very tender cucumbers . If you like , add 1/2 cup coarsely grated cucumber to the salad . <EOS>
+Generated instructions <SOS> To serve , spoon the salad dressing over salad . <EOS>
+
+Instruction step <SOS> Preheat a panini press according to manufacturer 's instructions . <EOS>
+Next step <SOS> Spread the cut sides of the baguettes with Dijon mustard , then sprinkle evenly with Roquefort cheese . Divide the roast beef among the bottom pieces , then spread the shallots out over the roast beef . Top with the top pieces . Cut each baguette into two or three pieces to fit your panini machine . <EOS>
+Generated instructions <SOS> Heat a large skillet over medium-high heat . Cook and stir onion , celery , celery , celery , celery , celery , celery , celery , celery , celery , celery , garlic , garlic , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
+
+Instruction step <SOS> Pour half of batter into a 9 x 13 inch pan . Combine the ground cinnamon and brown sugar . Sprinkle over the batter . Pour the other half of the batter over top . <EOS>
+Next step <SOS> Bake at 350 degrees F ( 175 degrees C ) for 50 minutes . <EOS>
+Generated instructions <SOS> Bake in preheated oven for 30 minutes , or until a toothpick inserted into the center of the cake comes out clean . <EOS>
+
+Instruction step <SOS> Add the carrot , celery and basil and cook for a further two minutes . <EOS>
+Next step <SOS> Add the meat and cook until brown . <EOS>
+Generated instructions <SOS> Add the rice and stir well . <EOS>
+
+Instruction step <SOS> Bring potatoes and broth to simmer in heavy medium saucepan over high heat . Cover , reduce heat to medium and simmer 10 minutes , stirring occasionally . <EOS>
+Next step <SOS> Position rack in center of oven and preheat to 375°F . Lightly oil 8x8x2-inch glass baking dish . Using slotted spoon , arrange half of potatoes over bottom of prepared dish . Spread salsa over . Arrange remaining potatoes over . Pour chicken broth evenly over . <EOS>
+Generated instructions <SOS> Meanwhile , in a large saucepan , heat 1 tablespoon oil over medium heat . Add onion , celery , celery , celery , celery , celery , and parsley ; Cook , stirring occasionally , until vegetables are tender , about 5 minutes . Add tomatoes , simmer , uncovered , stirring occasionally , until potatoes are tender , about 5 minutes . <EOS>
+
+Instruction step <SOS> Beat together the egg substitutes and milk . Dip the slices of bread in the egg mixture . <EOS>
+Next step <SOS> Heat a nonstick pan over medium-high heat . Coat with cooking spray . Cook the toast on each side for about 3 to 4 minutes per side until golden brown . <EOS>
+Generated instructions <SOS> Dip the bread into the bread cubes , <EOS>
+
+Instruction step <SOS> Allow the cake to cool down in the tin for 10 minutes , then loosen around the edges with a small , sharp knife and carefully remove the cake . Place on a wire rack to cool down fully . <EOS>
+Next step <SOS> For the meringue , in a large , spotlessly clean bowl , whisk the egg whites until they form soft peaks when the whisk is removed . <EOS>
+Generated instructions <SOS> For the filling , beat the cream cheese , sugar , and vanilla together in a bowl until smooth . Fold in the whipped cream and the whipped topping and mix well . <EOS>
+

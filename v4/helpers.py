@@ -134,7 +134,7 @@ def get_tensor_data(limit=70):
 
     # Get tensor representation
     input_ingr_tensors = get_ingr_tensors(word2idx)
-    input_instr_tensors = get_instr_tensors(word2idx, input_ingr_tensors)
+    input_instr_tensors = get_instr_tensors(word2idx)
     recipes = [(input_ingr_tensors[i], input_instr_tensors[i]) for i, rec in enumerate(input_ingr_tensors)]
 
     # Filter data
@@ -143,8 +143,8 @@ def get_tensor_data(limit=70):
 
     # Step pairs
     recipe_step_pairs = get_instruction_steps(recipes_filtered)
-    print(idx_to_words(recipe_step_pairs[0][0]))
-    print(idx_to_words(recipe_step_pairs[0][1]))
+    print(idx_to_words(recipe_step_pairs[0][0], idx2word))
+    print(idx_to_words(recipe_step_pairs[0][1], idx2word))
 
 
     return (recipe_step_pairs, idx2word, word2idx, MAX_LENGTH)
